@@ -161,10 +161,23 @@ a {
 }
 
 .clients .image {
-    margin-top: 96px;
+    margin-top: 70px;
     align-items: center;
     display: flex;
     justify-content: space-between;
+}
+
+.clients .image a {
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+    height: 90px;
+    /* background: orange; */
+    border-radius: 12px;
+}
+
+.clients .image a:hover {
+    box-shadow: 0px 10px 20px rgb(0, 0, 0, 0.1);
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++      guides */
