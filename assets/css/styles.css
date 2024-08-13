@@ -6,7 +6,8 @@
     --primary-color: #0f1b4c;
 }
 
-html, body {  
+html,
+body {
     scroll-behavior: smooth;
 }
 
@@ -54,7 +55,7 @@ a {
     overflow: hidden;
 }
 
-/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++   Header */
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++     Header */
 .fixed-header {
     background: #e6f0ff;
     padding-top: 26px;
