@@ -32,23 +32,37 @@
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
     <!-- css style -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
 </head>
 
 <body>
+    <!-- PC header -->
     <header class="fixed-header">
         <div class="content">
 
             <nav class="navbar">
+                <!-- Tablet/mobile menu -->
+                <label for="menu-checkbox" class="toggle-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="#0f1b4c" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3
+                             128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32
+                              32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7
+                               0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                </label>
                 <!-- Logo -->
-                <a href="#"><img src="./assets/img/logo.svg" alt="Bensnik." /></a>
+                <a href="#" class="logo"><img src="./assets/img/logo.svg" alt="Bensnik." /></a>
 
                 <!-- Navigation -->
-                <ul>
+                <ul id="pc-nav">
                     <li><a href="#">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#resources">Resources</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="show-on-mobile separate"><a href="#!">Sig in</a></li>
+                    <li class="show-on-mobile"><a href="#!">Sig up</a></li>
                 </ul>
 
                 <!-- Action -->
@@ -58,6 +72,27 @@
                 </div>
             </nav>
 
+        </div>
+    </header>
+    <!-- Tablet header -->
+    <header class="mobile-header">
+        <input type="checkbox" name="" id="menu-checkbox" class="menu-checkbox" hidden>
+        <!-- Overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <!-- Menu content-->
+        <div class="menu-drawer">
+            <!-- Logo -->
+            <a href="#"><img src="./assets/img/logo.svg" alt="Bensnik." /></a>
+
+            <!-- Navigation -->
+            <ul id="mobile-nav"></ul>
+            <script>
+                const pcNav = document.querySelector("#pc-nav");
+                const mobileNav = document.querySelector("#mobile-nav");
+
+                // copy from pc-nav
+                mobileNav.innerHTML = pcNav.innerHTML;
+            </script>
         </div>
     </header>
     <main>
@@ -97,7 +132,7 @@
                     <p class="desc">
                         More than 45,000+ companies trust besnik
                     </p>
-                    <p class="desc">5 Star Ratings (2k+ Review)</p>
+                    <p class="desc hide-on-mobile">5 Star Ratings (2k+ Review)</p>
                 </div>
                 <div class="image">
                     <a href="#!">
@@ -135,7 +170,7 @@
                         <h3 class="title">Buyer Guides</h3>
                         <span>
                             <a href="#!" class="link">How to buy</a>
-                            <img src="./assets/img/arrow-right.svg" alt="Arrow-right" class="arrow" />
+                            <img src="./assets/img/arrow-right.svg" alt="Arrow-right" class="arrow hide-on-mobile" />
                         </span>
                     </li>
                     <li class="guide-item">
@@ -143,7 +178,7 @@
                         <h3 class="title">Renter Guides</h3>
                         <span>
                             <a href="#!" class="link">How to rent</a>
-                            <img src="./assets/img/arrow-right.svg" alt="Arrow-right" class="arrow" />
+                            <img src="./assets/img/arrow-right.svg" alt="Arrow-right" class="arrow hide-on-mobile" />
                         </span>
                     </li>
                     <li class="guide-item">
@@ -151,7 +186,7 @@
                         <h3 class="title">Seller Guides</h3>
                         <span>
                             <a href="#!" class="link">How to sell</a>
-                            <img src="./assets/img/arrow-right.svg" alt="Arrow-right" class="arrow" />
+                            <img src="./assets/img/arrow-right.svg" alt="Arrow-right" class="arrow hide-on-mobile" />
                         </span>
                     </li>
                 </ul>
@@ -169,8 +204,8 @@
                     <div class="row">
                         <p class="desc">Everything you need to know when you're looking</p>
                         <a href="#!" class="link">
-                            <span>View All Properties</span>
-                            <img src="./assets/img/arrow-right.svg" alt="Arrow right" class="arrow">
+                            <span class="hide-on-mobile">View All Properties</span>
+                            <img src="./assets/img/arrow-right.svg" alt="Arrow right" class="arrow  hide-on-mobile">
                         </a>
                     </div>
                 </header>
@@ -231,6 +266,9 @@
                                 <span class="label">2000 Sqft</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="show-all">
+                        <a href="#!" class="btn show-on-mobile">View All Properties</a>
                     </div>
                 </div>
             </div>
@@ -297,7 +335,7 @@
                             that five out of six respondents said finding the right neighborhood </p>
                     </div>
                 </div>
-                <div class="row row-qty">
+                <div class="row-qty">
                     <div class="qty-item">
                         <strong class="qty">2,500</strong>
                         <p class="qty-desc">Homes For Sale</p>
@@ -320,7 +358,8 @@
                 <div class="body">
                     <div class="info">
                         <h2 class="sub-title line-clamp">Subscribe to our Newsletter!</h2>
-                        <p class="sub-desc line-clamp" style="--line-clamp: 3">Subscribe to our newsletter and stay updated.</p>
+                        <p class="sub-desc line-clamp" style="--line-clamp: 3">Subscribe to our newsletter and stay
+                            updated.</p>
                         <a href="#!" class="btn">Subscribe</a>
                     </div>
                     <img src="./assets/img/newsletter.svg" alt="Subscribe to our Newsletter!" class="image"></img>

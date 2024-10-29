@@ -1,0 +1,269 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .mobile-header {
+        display: none;
+    }
+    
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Ipad pro */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .hero-img {
+        right: 0;
+    }
+
+    .clients .image {
+        flex-wrap: wrap;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Tablet and mobile */
+@media screen and (max-width: 991.98px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .toggle-menu svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar li {
+        display: none;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        background: #fff;
+        z-index: 2;
+        transform: translateX(-100%);
+        transition: 0.5s ease;
+        padding: 60px;
+    }
+
+    .menu-drawer ul {
+        margin-top: 32px;
+    }
+
+    .menu-drawer ul a {
+        display: block;
+        padding: 14px 0;
+        color: #aaa;
+        font-weight: 600;
+    }
+
+    .menu-checkbox:checked~.menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked~.menu-drawer {
+        transform: translateX(0);
+    }
+
+    .separate {
+        border-top: 2px solid #ebebeb;
+    }
+
+    .hero-wrap {
+        height: 100%;
+        padding: 150px 0 50px;
+    }
+
+    .hero-img {
+        display: none;
+    }
+
+    .info {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .desc {
+        width: 100%;
+        margin: 30px auto;
+    }
+
+    .clients .image {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .guide-item {
+        margin: 0;
+    }
+
+    .featured .link {
+        text-wrap: nowrap;
+        font-size: 1.6rem;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats .img-block {
+        order: 2;
+    }
+
+    .stats .info {
+        order: 1;
+        padding: 0;
+        width: 60%;
+    }
+
+    .stats .img-block,
+    .stats .info {
+        width: 100%;
+    }
+
+    .stats .sub-title {
+        width: 100%;
+    }
+
+    .stats .info .desc {
+        width: 100%;
+    }
+
+    .stats .sub-title::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .stats .row-qty {
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 30px 0 150px;
+    }
+
+    .stats .qty {
+        font-size: 5rem;
+    }
+
+    .subscription .image {
+        display: none;
+    }
+
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        /* text-align: center; */
+    }
+
+    .footer .desc {
+        margin: 42px 0;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .menu-drawer {
+        inset: 0 25% 0 0;
+        padding: 40px;
+    }
+
+    .navbar .action {
+        display: none;
+    }
+
+    .hero-wrap .title {
+        padding-top: 20px;
+        font-size: 5.2rem;
+    }
+
+    .hero-wrap .desc {
+        width: 100%;
+    }
+
+    .guides {
+        padding: 60px 0;
+    }
+
+    .list-guide {
+        column-gap: 15px;
+    }
+
+    .featured .list {
+        grid-template-columns: 1fr;
+    }
+
+    .show-all {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .stats .img-block .image {
+        width: 100%;
+    }
+
+    .stats .stats-trend .row {
+        margin-top: 0;
+    }
+
+    .subscription .info {
+        padding: 0;
+    }
+
+    .stats .row-qty {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .stats .qty-desc {
+        margin-top: 10px;
+    }
+
+    .stats .qty {
+        font-size: 4rem;
+    }
+
+    .footer .row-bottom {
+        column-gap: 100px;
+    }
+}
